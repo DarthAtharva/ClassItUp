@@ -7,10 +7,21 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
-node_modules
-dist
-dist-ssr
-*.local
+# Node modules
+classDiagramTool/node_modules/
+api/node_modules/
+
+# Environment variables
+classDiagramTool/.env
+classDiagramTool/.env.local
+classDiagramTool/.env.*.local
+api/.env
+api/.env.local
+api/.env.*.local
+
+# Build output
+classDiagramTool/dist/
+api/dist/
 
 # Editor directories and files
 .vscode/*

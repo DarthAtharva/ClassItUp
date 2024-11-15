@@ -1,0 +1,123 @@
+/* #root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+} */
+
+/* Scroller Styles */
+/* .scroller {
+  max-width: 100%;
+} */
+
+/* Scroll animation */
+@keyframes scroll {
+  to {
+      transform: translateX(calc(-50% - 1rem));
+  }
+}
+
+.scroller {
+  overflow-x: hidden; 
+  position: relative;
+  width: 100%; 
+}
+
+.scroller__inner {
+  width: max-content;
+  animation: scroll 30s linear infinite; 
+  animation-play-state: running;
+}
+
+.dark .scroller[data-animated="true"] {
+  overflow: hidden;
+  -webkit-mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent);
+  mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent);
+}
+
+.scroller:hover .scroller__inner {
+  animation-play-state: paused;
+}
+
+.link-border-hover {
+  border: 2px solid transparent;
+  transition: border-color 0.3s ease;
+}
+
+.link-border-hover:hover {
+  border: 3px solid #0D9488; /* Green hover border */
+}
+
+/* To ensure gradient is below the border */
+.group:hover img {
+  transform: scale(1.05); /* Optional: slight zoom on hover */
+  transition: transform 0.3s ease;
+}
+
+.group:hover .link-border-hover {
+  border-color: #0D9488; /* Green hover border */
+}
+
+/* Scroller */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 5px; 
+  height: 5px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #4A5568; 
+  border-radius: 9999px;
+}
+
+/* Handle on hover */
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #2D3748; 
+}
+
+
+
+
+
+
+
+
