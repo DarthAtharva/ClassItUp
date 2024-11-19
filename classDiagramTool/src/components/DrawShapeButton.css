@@ -1,0 +1,36 @@
+.draw-shape-container {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  max-width: 400px;
+  margin: auto;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  text-align: center;
+}
+
+.draw-shape-container h3 {
+  margin-bottom: 20px;
+}
+
+.draw-shape-container label {
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  display: block;
+}
+
+.draw-shape-container input,
+.draw-shape-container select {
+  padding: 5px;
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+.shape-box {
+  margin-top: 20px;
+  width: 100%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
