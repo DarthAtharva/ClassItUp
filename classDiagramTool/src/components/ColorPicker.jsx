@@ -46,18 +46,3 @@ const ColorPicker = () => {
 };
 
 export default ColorPicker;
-// src/App.jsx
-import React from "react";
-import ColorPicker from "./components/ColorPicker";
-
-const App = () => {
-  return (
-    <div>
-      <h1>ClassItUp - Marker Color Selector</h1>
-      <ColorPicker />
-    </div>
-  );
-};
-
-export default App;
-

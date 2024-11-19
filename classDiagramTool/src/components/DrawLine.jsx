@@ -92,17 +92,4 @@ const LineDrawer = () => {
 
 export default LineDrawer;
 
-// src/App.jsx
-import React from "react";
-import LineDrawer from "./components/LineDrawer";
 
-const App = () => {
-  return (
-    <div>
-      <h1>ClassItUp - Line Drawing Tool</h1>
-      <LineDrawer />
-    </div>
-  );
-};
-
-export default App;

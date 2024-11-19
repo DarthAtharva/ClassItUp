@@ -8,7 +8,6 @@ const RightClickMenu = () => {
 
   const canvasRef = useRef(null);
 
-  // Create an object to add on the canvas
   const addObject = (x, y) => {
     setObjects([
       ...objects,

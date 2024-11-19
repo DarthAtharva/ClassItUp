@@ -39,18 +39,3 @@ const HandCursorButton = () => {
 };
 
 export default HandCursorButton;
-// src/App.jsx
-import React from "react";
-import HandCursorButton from "./components/HandCursorButton";
-
-const App = () => {
-  return (
-    <div>
-      <h1>ClassItUp - Hand Cursor Selector</h1>
-      <HandCursorButton />
-    </div>
-  );
-};
-
-export default App;
-
