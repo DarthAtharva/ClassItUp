@@ -1,0 +1,64 @@
+/* src/components/ColorFillPicker.css */
+.color-fill-picker {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.fill-type-options {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.color-options {
+  display: grid;
+  grid-template-columns: repeat(6, 40px);
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.color-swatch {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.color-swatch:hover {
+  transform: scale(1.1);
+}
+
+.example-marker {
+  width: 200px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-weight: bold;
+  border: 1px solid #333;
+}
+
+.example-marker.none {
+  background-color: transparent;
+}
+
+.example-marker.semi {
+  opacity: 0.5;
+}
+
+.example-marker.full {
+  opacity: 1;
+}
+
+.example-marker.pattern {
+  background-image: repeating-linear-gradient(
+    45deg,
+    rgba(255, 255, 255, 0.2) 0,
+    rgba(255, 255, 255, 0.2) 10px,
+    transparent 10px,
+    transparent 20px
+  );
+}
