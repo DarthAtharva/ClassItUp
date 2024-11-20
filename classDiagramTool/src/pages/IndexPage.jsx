@@ -13,6 +13,25 @@ const components = {
   DebugMenu: null,
 };
 
+const [drawingState, setDrawingState] = useState(null);
+
+useEffect(() => {
+  const savedState = localStorage.getItem('tldraw-session');
+  if (savedState) {
+    setDrawingState(JSON.parse(savedState)); 
+  }
+}, []);
+
+useEffect(() => {
+  if (drawingState) {
+    localStorage.setItem('tldraw-session', JSON.stringify(drawingState)); 
+  }
+}, [drawingState]);
+
+const updateDrawing = (newState) => {
+  setDrawingState(newState); 
+}
+
 export default function IndexPage() {
   const editorRef = useRef(null);
   const tldrawContainerRef = useRef(null);
