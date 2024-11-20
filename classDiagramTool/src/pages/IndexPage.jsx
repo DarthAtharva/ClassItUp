@@ -3,7 +3,6 @@ import { Tldraw } from 'tldraw';
 import domtoimage from 'dom-to-image';
 import 'tldraw/tldraw.css';
 
-// Define which components to exclude from Tldraw
 const components = {
   ActionsMenu: null,
   HelpMenu: null,
@@ -22,7 +21,7 @@ export default function IndexPage() {
   useEffect(() => {
     const locateCanvas = () => {
       if (tldrawContainerRef.current) {
-        // Update this selector if necessary based on Tldraw's DOM structure
+
         drawingCanvasRef.current = tldrawContainerRef.current.querySelector('.tl-canvas');
 
         if (!drawingCanvasRef.current) {
@@ -48,7 +47,6 @@ export default function IndexPage() {
       console.log('Attempting to export only the drawing canvas with dom-to-image...');
       const dataUrl = await domtoimage.toPng(drawingCanvasRef.current);
 
-      // Create a link to download the PNG file
       const link = document.createElement('a');
       link.href = dataUrl;
       link.download = 'canvas-export.png';
@@ -62,7 +60,7 @@ export default function IndexPage() {
   };
 
   return (
-    <div style={{ position: 'absolute', width: '100%', height: '100vh' }}>
+    <div style={{ position: 'absolute', width: '100%', height: '92vh' }}>
       {/* Styled Export Button */}
       <div style={{ position: 'absolute', top: 0, left: 275, zIndex: 1000 }}>
         <button onClick={handleExport} style={buttonStyle}>
@@ -70,7 +68,6 @@ export default function IndexPage() {
         </button>
       </div>
 
-      {/* Tldraw Component Container */}
       <div ref={tldrawContainerRef} style={{ width: '100%', height: '100%', overflow: 'hidden' }}>
         <Tldraw
           onMount={(editor) => {
@@ -85,7 +82,6 @@ export default function IndexPage() {
   );
 }
 
-// CSS styling for the export button
 const buttonStyle = {
   padding: '8px 20px',
   // margin: '5px',
