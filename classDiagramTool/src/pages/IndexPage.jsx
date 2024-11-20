@@ -1,4 +1,4 @@
-import React, { useRef, useEffect } from 'react';
+import React, { useRef, useEffect, useState} from 'react';
 import { Tldraw } from 'tldraw';
 import domtoimage from 'dom-to-image';
 import 'tldraw/tldraw.css';
@@ -13,29 +13,27 @@ const components = {
   DebugMenu: null,
 };
 
-const [drawingState, setDrawingState] = useState(null);
-
-useEffect(() => {
-  const savedState = localStorage.getItem('tldraw-session');
-  if (savedState) {
-    setDrawingState(JSON.parse(savedState)); 
-  }
-}, []);
-
-useEffect(() => {
-  if (drawingState) {
-    localStorage.setItem('tldraw-session', JSON.stringify(drawingState)); 
-  }
-}, [drawingState]);
-
-const updateDrawing = (newState) => {
-  setDrawingState(newState); 
-}
-
 export default function IndexPage() {
+  
   const editorRef = useRef(null);
   const tldrawContainerRef = useRef(null);
   const drawingCanvasRef = useRef(null);
+
+  const [drawingState, setDrawingState] = useState(null);
+
+  useEffect(() => {
+    const savedState = localStorage.getItem('tldraw-session');
+    if (savedState) {
+      setDrawingState(JSON.parse(savedState)); 
+    }
+  }, []);
+
+  // Save state to local storage whenever it changes
+  useEffect(() => {
+    if (drawingState) {
+      localStorage.setItem('tldraw-session', JSON.stringify(drawingState)); // Serialize data
+    }
+  }, [drawingState]);
 
   useEffect(() => {
     const locateCanvas = () => {
